@@ -1,0 +1,24 @@
+services:
+  web:
+    build: .
+    ports:
+      - "8081:8081"
+    depends_on:
+      db:
+        condition: service_healthy
+  db:
+    image: mysql:8.0.32
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: casa123
+      MYSQL_DATABASE: pitangdb
+    ports:
+      - "3306:3306"
+    healthcheck:
+      test: ["CMD", "mysqladmin", "ping", "-h", "db", "-u", "root", "-p{MYSQL_ROOT_PASSWORD}"] 
+      # A senha é vista depois de um tempo no log
+      # O comando root@localhost empty password é um comando normal, pois ainda não está configurado totalmente.
+      interval: 10s
+      timeout: 5s
+      retries: 5
+      start_period: 30s 
