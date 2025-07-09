@@ -106,5 +106,6 @@ E.g:
 - Backend: Spring Boot (Java)
 - Database: MySQL
 - Containerization: Docker, Docker Compose
+- Cloud computing: Aws
 #### Contributing
 We welcome contributions to the MiniBank project! If you'd like to contribute, please feel free to fork the repository, make your changes, and submit a pull request.
