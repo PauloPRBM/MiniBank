@@ -2,25 +2,24 @@ package com.squad21.pitang.User.UserDTO;
 import jakarta.validation.constraints.*;
 
 public record UserDTO(
+        String name,
+        @NotBlank(message = "Full name can't be empty")
+        @Size(min = 3, max = 100, message = "Full name must have about 3 and 100 digits")
 
-        @NotBlank(message = "O nome completo não pode estar em branco")
-        @Size(min = 3, max = 100, message = "O nome completo deve ter entre 3 e 100 caracteres")
-        String nome,
-
-        @NotBlank(message = "O CPF não pode estar em branco")
-        @Pattern(regexp = "\\d{11}", message = "CPF deve conter exatamente 11 dígitos")
-        // ADICIONAR VERIFICAÇÃO REAL DE CPF
+        @NotBlank(message = "Cpf can't be empty")
+        @Pattern(regexp = "\\d{11}", message = "CPF must have 11 digits")
+        // Validation of CPF
         String cpf,
 
-        @NotBlank(message = "O e-mail não pode estar em branco")
-        @Email(message = "Formato de e-mail inválido")
+        @NotBlank(message = "The e-mail can't be empty")
+        @Email(message = "Invalid format of e-mail")
         String email,
 
-        @NotBlank(message = "A senha não pode estar em branco")
-        @Size(min = 6, message = "A senha deve ter no mínimo 6 caracteres")
-        String senha,
+        @NotBlank(message = "Password can't be empty")
+        @Size(min = 6, message = "Password must have at least 6 digits")
+        String password,
 
-        @NotBlank(message = "O endereço não pode estar em branco")
-        String endereco
+        @NotBlank(message = "Address can't be empty")
+        String address
 ) {
 }

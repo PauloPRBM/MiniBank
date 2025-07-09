@@ -1,3 +1,5 @@
+C:\Users\gabri\OneDrive\Área de Trabalho\Mini-Bank-Master-Novo\MiniBank\src\main\java\com\squad21\pitang\AccountBalance\AccountBalanceController.java
+C:\Users\gabri\OneDrive\Área de Trabalho\Mini-Bank-Master-Novo\MiniBank\src\main\java\com\squad21\pitang\AccountBalance\AccountBalanceService.java
 C:\Users\gabri\OneDrive\Área de Trabalho\Mini-Bank-Master-Novo\MiniBank\src\main\java\com\squad21\pitang\Emprestimo\AlterarEmprestimo\AlterarEmprestimoController.java
 C:\Users\gabri\OneDrive\Área de Trabalho\Mini-Bank-Master-Novo\MiniBank\src\main\java\com\squad21\pitang\Emprestimo\AlterarEmprestimo\AlterarEmprestimoService.java
 C:\Users\gabri\OneDrive\Área de Trabalho\Mini-Bank-Master-Novo\MiniBank\src\main\java\com\squad21\pitang\Emprestimo\AlterarEmprestimo\EmprestimoStatusDTO.java
@@ -11,6 +13,8 @@ C:\Users\gabri\OneDrive\Área de Trabalho\Mini-Bank-Master-Novo\MiniBank\src\mai
 C:\Users\gabri\OneDrive\Área de Trabalho\Mini-Bank-Master-Novo\MiniBank\src\main\java\com\squad21\pitang\Login\LoginController.java
 C:\Users\gabri\OneDrive\Área de Trabalho\Mini-Bank-Master-Novo\MiniBank\src\main\java\com\squad21\pitang\PitangApplication.java
 C:\Users\gabri\OneDrive\Área de Trabalho\Mini-Bank-Master-Novo\MiniBank\src\main\java\com\squad21\pitang\RestControllerAdvice\ValidationExceptionHandler.java
+C:\Users\gabri\OneDrive\Área de Trabalho\Mini-Bank-Master-Novo\MiniBank\src\main\java\com\squad21\pitang\TransactionRequest\SeeTransactions\Controller\SeeTransactionController.java
+C:\Users\gabri\OneDrive\Área de Trabalho\Mini-Bank-Master-Novo\MiniBank\src\main\java\com\squad21\pitang\TransactionRequest\SeeTransactions\Service\SeeTransactionsService.java
 C:\Users\gabri\OneDrive\Área de Trabalho\Mini-Bank-Master-Novo\MiniBank\src\main\java\com\squad21\pitang\TransactionRequest\TransferController.java
 C:\Users\gabri\OneDrive\Área de Trabalho\Mini-Bank-Master-Novo\MiniBank\src\main\java\com\squad21\pitang\TransactionRequest\TransferService.java
 C:\Users\gabri\OneDrive\Área de Trabalho\Mini-Bank-Master-Novo\MiniBank\src\main\java\com\squad21\pitang\User\Client\ClientController\ClientController.java

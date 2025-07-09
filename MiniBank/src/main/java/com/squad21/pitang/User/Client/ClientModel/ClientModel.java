@@ -14,6 +14,6 @@ import lombok.EqualsAndHashCode;
 @Entity(name = "Client")
 public class ClientModel extends User{
     @Column(unique = true)
-    private Long numeroConta;
-    private BigDecimal saldo;
+    private Long numberAccount;
+    private BigDecimal balance;
 }

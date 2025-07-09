@@ -8,6 +8,6 @@ import org.springframework.stereotype.Repository;
 import com.squad21.pitang.User.User;
 @Repository
 public interface UserRepository extends JpaRepository<User, UUID>{
-    User findBynome(String nome);
+    User findByname(String name);
     User findByCpf(String cpf);  
 }

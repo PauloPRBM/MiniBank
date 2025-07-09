@@ -23,22 +23,22 @@ import at.favre.lib.crypto.bcrypt.BCrypt;
         if(user_cpf != null){
             return ResponseEntity.
             status(HttpStatus.BAD_REQUEST)
-            .body("{\"error\": \"CPF já cadastrado!\"}");
+            .body("{\"error\": \"This CPF already exists!\"}");
         }
 
         ClientModel newClient = new ClientModel();
-        newClient.setNome(data.nome());
+        newClient.setName(data.name());
         newClient.setCpf(data.cpf());
         newClient.setEmail(data.email());
-        newClient.setEndereco(data.endereco());
-        newClient.setSaldo(new BigDecimal("50.00"));
-        newClient.setNumeroConta(new Random().nextLong(900000) + 100000); // entre 100000 e 999999
+        newClient.setAddress(data.address());
+        newClient.setBalance(new BigDecimal("50.00"));
+        newClient.setNumberAccount(new Random().nextLong(900000) + 100000); // entre 100000 e 999999
 
         var passwordHashred = BCrypt.withDefaults().
             hashToString(12, 
-            data.senha().
+            data.password().
             toCharArray());
-            newClient.setSenha(passwordHashred);
+            newClient.setPassword(passwordHashred);
 
         var clientCreated = this.clientRepository.save(newClient);
 

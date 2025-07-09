@@ -27,16 +27,16 @@ public class LoginController {
     @GetMapping("")
     public ResponseEntity<?> getDados(HttpServletRequest request, HttpServletResponse response){
     UUID idUser = (UUID) request.getAttribute("idUser");
-    var saldo = request.getAttribute("saldo");
+    var saldo = request.getAttribute("balance");
     var cliente = clientRepository.findById(idUser);
     if(cliente.isPresent()){
-        return ResponseEntity.status(201).body("saldo: " + saldo);
+        return ResponseEntity.status(201).body("balance: " + saldo);
     }
     var gerente = managerRepository.findById(idUser);
     if(gerente.isPresent()){
-        return ResponseEntity.status(201).body("Bem-vindo!");
+        return ResponseEntity.status(201).body("Welcome!");
     }
-    return ResponseEntity.status(404).body("{\"error\": \"Usuário não encontrado.\"}");
+    return ResponseEntity.status(404).body("{\"error\": \"User not found.\"}");
 
 }
 }

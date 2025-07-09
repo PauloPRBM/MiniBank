@@ -19,16 +19,12 @@ public abstract class User implements Serializable{
     @Id
     @GeneratedValue
     private UUID id;
-    private String nome;
-    /*
-     * Usar string no cpf inves de int pois, o int não reconhece o 0.
-     * Também não iria reconhecer o padrão "XX.XX.XX---X" etc.
-    */
+    private String name;
     @Column(unique = true, length = 11)
     private String cpf;
-    private String endereco;
+    private String address;
     private String email;
-    private String senha;
+    private String password;
     
     @CreationTimestamp
     private LocalDateTime createdAt;

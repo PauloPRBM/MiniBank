@@ -16,16 +16,16 @@ import jakarta.annotation.PostConstruct;
         private MnRepository managerRepository;
         @PostConstruct
         public void Create_Manager(){
-        if(managerRepository.findBynome("gerente") == null){
+        if(managerRepository.findByname("manager") == null){
         MnModel newClient = new MnModel();
-        newClient.setNome("gerente");
-        newClient.setSenha("gerencia");
+        newClient.setName("manager");
+        newClient.setPassword("password");
         
         var passwordHashred = BCrypt.withDefaults().
             hashToString(12, 
-            newClient.getSenha().
+            newClient.getPassword().
             toCharArray());
-            newClient.setSenha(passwordHashred);
+            newClient.setPassword(passwordHashred);
 
             managerRepository.save(newClient);
         }

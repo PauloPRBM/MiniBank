@@ -6,6 +6,6 @@ import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 @Repository
 public interface MnRepository extends JpaRepository<MnModel, UUID>{
-    MnModel findBynome(String nome);
+    MnModel findByname(String nome);
     MnModel findByCpf(String cpf);
 }

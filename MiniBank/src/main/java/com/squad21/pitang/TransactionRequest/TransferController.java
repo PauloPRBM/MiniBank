@@ -8,27 +8,27 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+
+
 @RestController
-@RequestMapping("/transferencias")
+@RequestMapping("/transfer")
 public class TransferController {
     @Autowired
-    private TransferService transferService;
-
+    TransferService transferService;
     public record TransferRequest(
-        Long numeroContaOrigem,
-        Long numeroContaDestino,
-        BigDecimal valor
-    ) {}
-
+    Long destinationAccount,
+    Long sourceAccount,
+    BigDecimal value
+    ){}
     @PostMapping
-    public ResponseEntity<?> transferir(@RequestBody TransferRequest request) {
+    public ResponseEntity<?> transfer(@RequestBody TransferRequest request) {
         try {
-            transferService.transferByNumeroConta(request.numeroContaOrigem(), request.numeroContaDestino(), request.valor());
-            return ResponseEntity.ok("Transferência realizada com sucesso.");
+        transferService.transferByAccountNumber(request.sourceAccount(), request.destinationAccount(), request.value());
+            return ResponseEntity.ok("Transfer successfull");
         } catch (IllegalArgumentException e) {
             return ResponseEntity.badRequest().body("{\"erro\": \"" + e.getMessage() + "\"}");
         } catch (Exception e) {
-            return ResponseEntity.status(500).body("{\"erro\": \"Erro interno: " + e.getMessage() + "\"}");
+            return ResponseEntity.status(500).body("{\"erro\": \"Error: " + e.getMessage() + "\"}");
         }
+    } 
     }
-}
